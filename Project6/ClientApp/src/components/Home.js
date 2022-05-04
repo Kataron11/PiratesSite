@@ -149,23 +149,3 @@ function Home() {
 }
 
 export default Home;
-
-
-
-/*     <div>
-                    <form onSubmit={find}>
-                        <label>
-                            <p>Login</p>
-                            <input type="text" onChange={changeLogin} value={account.Login} />
-                        </label>
-                        {loginValid && <div className="invalid">{loginValid}</div>}
-                        <label>
-                            <p>Has³o</p>
-                            <input type="password" onChange={changePassword} value={account.Password} />
-                        </label>
-                        {passwordValid && <div className="invalid">{passwordValid}</div>}
-                        <div>
-                            <button type="submit">Zarejestruj siê</button>
-                        </div>
-                    </form>
-                </div>*/

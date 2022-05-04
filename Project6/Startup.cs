@@ -14,6 +14,7 @@ using Project6.Model.Validator;
 using FluentValidation;
 using Project6.Models;
 using Project6.Model;
+using Project6.Services;
 
 namespace Project6
 {
@@ -40,6 +41,8 @@ namespace Project6
 
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<IAccountService, AccountService>();
+            services.AddScoped<IShopRepository, ShopRepository>();
+            services.AddScoped<IShopService, ShopService>();
 
 
 

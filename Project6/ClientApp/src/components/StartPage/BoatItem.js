@@ -1,4 +1,6 @@
-﻿function BoatItem(props) {
+﻿import { Button } from "reactstrap";
+
+function BoatItem(props) {
 
     return (
         <li>
@@ -6,6 +8,7 @@
             <p>Szybkość : {props.Speed}</p>
             <p>Życie : {props.Health}</p>
             <p>Cena : {props.Price}</p>
+            <Button>Kup</Button>
         </li>
         );
 
