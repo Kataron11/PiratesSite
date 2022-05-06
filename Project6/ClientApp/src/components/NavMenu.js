@@ -10,8 +10,10 @@ export class NavMenu extends Component {
         super(props);
 
         this.toggleNavbar = this.toggleNavbar.bind(this);
+        this.logoutNav = this.logoutNav.bind(this);
         this.state = {
-            collapsed: true
+            collapsed: true,
+            login: localStorage.getItem('myData')
         };
     }
 
@@ -19,6 +21,11 @@ export class NavMenu extends Component {
         this.setState({
             collapsed: !this.state.collapsed
         });
+  
+    }
+
+    logoutNav() {
+        this.setState({ login: localStorage.setItem('myData', false) })
     }
 
     render() {
@@ -26,7 +33,7 @@ export class NavMenu extends Component {
             <header>
                 <Navbar className="navbar-expand-sm navbar-toggleable-sm ng-white border-bottom box-shadow mb-3" light>
                    
-                        <NavbarBrand tag={Link} to="/">Project6</NavbarBrand>
+                        <NavbarBrand tag={Link} to="/">Statki Pirackie the Game</NavbarBrand>
                         <NavbarToggler onClick={this.toggleNavbar} className="mr-2" />
                         <Collapse className="d-sm-inline-flex flex-sm-row-reverse" isOpen={!this.state.collapsed} navbar>
                             <ul className="navbar-nav flex-grow">
@@ -35,10 +42,23 @@ export class NavMenu extends Component {
                                 </NavItem>
                                 <NavItem>
                                     <NavLink tag={Link} className="text-dark" to="/MyBoats">Moje statki</NavLink>
+                            </NavItem>
+                            {this.state.login == "true" && 
+                                <NavItem>
+                                <NavLink onClick={this.logoutNav} tag={Link} className="text-dark" to="/Home">Wyloguj</NavLink>
                                 </NavItem>
-  
+                            }
+                            {this.state.login == "false" &&
+                                <NavItem>
+                                    <NavLink tag={Link} className="text-dark" to="/Home">Zaloguj/Zajerestruj</NavLink>
+                                </NavItem>
+                            }
+
                             </ul>
-                        </Collapse>
+                    </Collapse>
+                    
+                        
+                    
                     
                 </Navbar>
             </header>

@@ -11,12 +11,17 @@ function Boats() {
             .then(data => setBoatList(data));
     }, []);
 
+    function addBoat() {
+
+    }
+
     const listItems = boatList.map((number) =>
         <BoatItem
             Name={number.name}
             Price={number.price}
             Speed={number.speed}
             Health={number.health}
+            onClick={addBoat}
         ></BoatItem>
     );
 

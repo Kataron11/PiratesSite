@@ -46,6 +46,7 @@ function Home() {
             setResponseAccount(true);
             setAccount({ Login: '', Password: '' });
             setButtonRegister(false);
+
         }
 
 
@@ -68,6 +69,7 @@ function Home() {
             setResponseAccount(true);
             setAccount({ Login: '', Password: '' });
             setButtonLogin(false);
+            localStorage.setItem('myData', true);
         }
     }
 

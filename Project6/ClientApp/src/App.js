@@ -10,7 +10,7 @@ function App() {
 
         return (
             <Layout>
-                <Route path='' component={Home} />
+                <Route path='/home' component={Home} />
                 <Route path='/boats' component={Boats} />
             </Layout>
         );
