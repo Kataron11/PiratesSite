@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Project6.Model;
 
 namespace Project6.Migrations
 {
     [DbContext(typeof(PirateDBContext))]
-    partial class PirateDBContextModelSnapshot : ModelSnapshot
+    [Migration("20220504114413_nullabcd")]
+    partial class nullabcd
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
