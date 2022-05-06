@@ -19,5 +19,9 @@ namespace Project6.Services
             return _shopRepository.GetBoats();
         }
 
+        public void AddBoat(int boatId)
+        {
+            _shopRepository.AddBoat(boatId);
+        }
     }
 }

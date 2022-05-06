@@ -16,7 +16,7 @@ namespace Project6.Model
         public int Id { get; set; }
         public string Login { get; set; } 
         public string Password { get; set; }
-        public int CountryId { get; set; }
+        public int? CountryId { get; set; }
         public DateTime LastLogin { get; set; }
         public virtual Country Country { get; set; }
         public virtual ICollection<AccountBoat> AccountBoats { get; set; }

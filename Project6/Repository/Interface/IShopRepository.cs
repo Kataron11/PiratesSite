@@ -6,5 +6,6 @@ namespace Project6.Repository.Interface
     public interface IShopRepository
     {
         public IQueryable<Boat> GetBoats();
+        public void AddBoat(int boatId);
     }
 }

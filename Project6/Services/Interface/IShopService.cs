@@ -10,6 +10,7 @@ namespace Project6.Services.Interface
     public interface IShopService
     {
         public IQueryable<Boat> GetBoats();
+        public void AddBoat(int boatId);
 
     }
 }

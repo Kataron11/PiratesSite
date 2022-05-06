@@ -21,6 +21,14 @@ namespace Project6.Controllers
             return Ok(_shopService.GetBoats());
         }
 
+        [HttpPost]
+        public IActionResult AddBoat(int boatId)
+        {
+            _shopService.AddBoat(boatId);
+            return Ok();
+
+        }
+
         /*private readonly IAccountService _accountService;
         private readonly IValidator<AccountDto> _validator;
 
